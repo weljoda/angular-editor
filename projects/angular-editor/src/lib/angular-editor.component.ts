@@ -43,9 +43,9 @@ export class AngularEditorComponent implements OnInit, ControlValueAccessor, Aft
 
   @Output() html;
 
-  @ViewChild('editor') textArea: any;
-  @ViewChild('editorWrapper') editorWrapper: any;
-  @ViewChild('editorToolbar') editorToolbar: AngularEditorToolbarComponent;
+  @ViewChild('editor', { static: true }) textArea: any;
+  @ViewChild('editorWrapper', { static: true }) editorWrapper: any;
+  @ViewChild('editorToolbar', { static: false }) editorToolbar: AngularEditorToolbarComponent;
 
   @Output() viewMode = new EventEmitter<boolean>();
 
