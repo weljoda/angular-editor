@@ -1,23 +1,34 @@
 <div class="container">
-  <h1>Angular Editor</h1>
-  <p><a href="https://github.com/kolkov/angular-editor">Get it here</a></p>
-
-  <label for="test_input">Test input </label>
-  <input id="test_input">
-  <br><br>
-  <angular-editor id="editor1" [(ngModel)]="htmlContent1" [config]="config1" (ngModelChange)="onChange($event)"
-                  (blur)="onBlur($event)"></angular-editor>
-  <p class="html">
-    HTML Output:  {{ htmlContent1 }}
-  </p>
-  <form [formGroup]="form">
-    <angular-editor autofocus="true" id="editor2" formControlName="signature" [config]="config2" (ngModelChange)="onChange2($event)"></angular-editor>
-  </form>
+  <header class="header">
+    <h1>AngularEditor</h1>
+    <p>Native WYSIWYG editor for Angular 6+</p>    
+  </header>
+  
+  <input type="checkbox" id="scales" name="Slow"
+         checked>
+    <angular-editor id ="1"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="2"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="3"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="4"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="5"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="6"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="7"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="8"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="9"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="10"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="11"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="12"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="13"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="14"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+    <angular-editor id ="15"[(ngModel)]="htmlContent" [config]="config"></angular-editor>
+  <h5 class="html-header">HTML Output</h5>
+  <div class="html">
+    {{ htmlContent }}
+  </div>
   <p>
-    Form Value: {{ form.value.signature }}
+NPM package is here:
+  <a href="https://www.npmjs.com/package/@kolkov/angular-editor">https://www.npmjs.com/package/@kolkov/angular-editor</a>
   </p>
-  <p>
-    Form Status: {{ form.status }}
-  </p>
+  GitHub repo is here:
+  <a href="https://github.com/kolkov/angular-editor">https://github.com/kolkov/angular-editor</a>
 </div>
-
